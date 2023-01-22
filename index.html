@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FBXKYEMLPF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <title>Mon site web</title>
+    <script>
+        function getIPInfo() {
+            // Faire une demande pour récupérer les informations d'IP à l'aide de l'API d'ipinfo.io
+            fetch('https://ipinfo.io/json')
+                .then(response => response.json())
+                .then(data => {
+                    // Afficher les informations d'IP
+                    document.querySelector("#ip-info").innerHTML = 
+                    `<h1 </h1>  Ville : ${data.city} <br> Région : ${data.region} <br> Pays : ${data.country} <br> Opérateur : ${data.org}`;
+                	})
+                .catch(error => console.error('Erreur lors de la récupération des données', error));
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getIPInfo()">Afficher les informations d'IP</button>
+    <div id="ip-info"></div>
 
-  gtag('config', 'G-FBXKYEMLPF');
-</script>
+<!DOCTYPE html>
+<html>
+<head>
     <title>Mon site web</title>
     <style>
         /* Définir le gif de fond pour l'élément body */
@@ -33,6 +46,20 @@
         border-radius: 20px;
         overflow: hidden;
         text-align: right; 
+        box-sizing: border-box; 
+        width: fit-content; 
+    }
+    h1 {
+        position: absolute; /* pour positionner l'élément absolument */
+        margin-top: 150px; 
+        margin-left: 830px; /* pour positionner l'élément à 900px de la gauche */
+        border: 2px solid purple;
+        background-color: pink;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 15px;
+        overflow: hidden;
+        text-align: center; 
         box-sizing: border-box; 
         width: fit-content; 
     }
@@ -64,6 +91,7 @@ function getTime() {
   var d = new Date();
   document.getElementById("time").innerHTML = "Heure de clic : " + d.toLocaleString();
 }
+
 </script>
 </body>
 </html>

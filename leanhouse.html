@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lean House - Hébergement Religieux en Colombie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            padding-bottom: 50px;
+        }
+
+        header {
+            background-color: #FF99CC; /* Rose */
+            color: #660066; /* Violet foncé */
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+
+        .text-gauche,
+        .text-droite {
+            position: absolute;
+            top: 50%;
+            color: #8B008B;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 4px solid #FF69B4; /* Couleur rose (teinte #FF69B4) pour le trait, épaisseur de 4 pixels */
+            padding: 5px; /* Ajoute un espace intérieur entre le texte et le trait */
+            border-radius: 20px;
+        }
+
+        .text-gauche div,
+        .text-droite div {
+            margin: 5px 0; /* Espacement entre chaque lettre */
+        }
+
+        .text-gauche {
+            left: 20px;
+            top: 60%;
+            margin-left: 290px;
+        }
+
+        .text-droite {
+            right: 20px;
+            top: 57%;
+            margin-right: 290px;
+        }
+
+       .logo {
+            width: 50px; /* Ajustez la largeur de votre logo selon vos besoins */
+            height: auto;
+            margin-right: 10px;
+            border-radius: 100px;
+        }
+
+        nav {
+            background-color: #FFB6C1; /* Rose clair */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #800080; /* Violet */
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .capsule {
+            background-color: #F5B0CB; /* Mauve */
+            color: #660066; /* Violet foncé */
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #FF99CC; /* Rose */
+            color: #660066; /* Violet foncé */
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        h1, h2 {
+            color: #800080; /* Violet */
+        }
+
+        p {
+            color: #660066; /* Violet foncé */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .image-2 {
+            max-width: 80%; /* Vous pouvez ajuster le pourcentage selon votre préférence */
+            height: auto; /* Assurez-vous que l'image conserve son ratio hauteur/largeur */
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo.jpeg" alt="Votre Logo Gauche">
+        <h1>Lean House</h1>
+        <img class="logo" src="logo.jpeg" alt="Votre Logo Droite">
+    </header>
+    <nav>
+        <a href="#accueil-section">Accueil</a>
+        <a href="#hebergement-section">Hébergement</a>
+        <a href="#contact-section">Contact</a>
+    </nav>
+<section id="accueil-section">
+    <div class="capsule">
+        <h2>Accueil</h2>
+        <div class="header">
+            <div class="text-gauche">
+            <div>L<br>E<br>A<br>N</div>
+        </div>
+        <img src="image1.jpg" alt="Image 1">
+                <div class="text-droite">
+            <div>H<br>O<br>U<br>S<br>E</div>
+        </div>
+    </div>
+        <p>Bienvenue à la Lean House, un lieu d'hébergement religieux situé au cœur de la Colombie,<br>dans la légendaire forêt de Santa Rosa à seulement 5 minutes au sud de Potrero. <br>Notre mission est d'offrir un espace paisible et spirituel pour les voyageurs et les pèlerins en quête de repos et de paix.</p>
+    </div>
+</section>
+<section id="hebergement-section">
+    <div class="capsule">
+        <h2>Nos Services d'Hébergement</h2>
+        <img class="image-2" src="image2.png" alt="Image 2">
+        <p>La Lean House propose des chambres confortables, des repas traditionnels et des espaces de prière.<br>Notre environnement calme et serein offre l'opportunité de se ressourcer et de se connecter avec la spiritualité.</p>
+    </div>
+</section>
+<section id="contact-section">
+    <div class="capsule">
+        <h2>Contactez-Nous !</h2>
+        <img src="image3.png" alt="Image 3">
+        <p>Adresse : [420 LEAN HOUSE LEAN HOUSE LEAN HOUSE San Andrés y Providencia, Colombie]</p>
+        <p>Téléphone : [420 69 69 420]</p>
+        <p>Email : [aikiswag@duck.com]</p>
+        <img src="image3.png" alt="Image 3">
+    </div>
+</section>
+    <footer>
+        <p>&copy; 2023 Lean House. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        var password = "";
+        var secretPassword = "extracteur";
+
+        // Ajoute un écouteur d'événements pour surveiller les touches du clavier
+        document.addEventListener("keypress", function(event) {
+            // Récupère la touche que l'utilisateur a pressée
+            var keyPressed = String.fromCharCode(event.keyCode);
+            // Ajoute la touche à la chaîne de mot de passe
+            password += keyPressed;
+
+            // Vérifie si le mot de passe correspond à "extracteur"
+            if (password === secretPassword) {
+                // Redirige l'utilisateur vers la page secrète
+                window.location.href = "leanadmin.html";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrôle du Monde</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            border: 2px solid black;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            content.classList.toggle('hidden');
+            content.classList.toggle('visible');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle" onclick="toggleContent('leanHouse')">LEAN</div>
+        <div id="leanHouse" class="hidden">
+            <h2>Plan de Contrôle du Monde</h2>
+            <div class="circle" onclick="toggleContent('strategies')">L</div>
+            <div id="strategies" class="hidden">
+                <p>Nos stratégies de manipulation incluent la diffusion ciblée d'informations, la création d'émotions artificielles<br>et la mise en place de scénarios de crise soigneusement orchestrés.<br>En contrôlant les flux d'information, nous avons le pouvoir de façonner les pensées<br>et les opinions de la population mondiale mais surtout des individus<br>de par leur essence.</p>
+            </div>
+
+            <div class="circle" onclick="toggleContent('controle')">E</div>
+            <div id="controle" class="hidden">
+                <p>Nous utilisons des outils classiques pour surveiller les comportements en ligne, prédire les tendances sociales<br>et influencer les choix individuels. Grâce à notre savoir-faire technique,<br>nous sommes en mesure de manipuler les masses de manière imperceptible,<br>garantissant ainsi le succès du plan.</p>
+            </div>
+
+            <div class="circle" onclick="toggleContent('resistance')">A</div>
+            <div id="resistance" class="hidden">
+                <p>Notre équipe, robuste et adaptable, et prête à faire face à toute opposition.<br>Rejoignez la Lean House avant qu'il ne soit trop tard!</p>
+            </div>
+
+            <div class="circle" onclick="toggleContent('cause')">N</div>
+            <div id="cause" class="hidden">
+                <p>Ensemble, nous pouvons réécrire la réalité selon nos termes et créer un avenir humain perpétuel,<br>servant l'objectif ultime.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

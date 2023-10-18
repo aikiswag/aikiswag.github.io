@@ -7,31 +7,16 @@
     <title>Contrôle du Monde</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #FF69B4, #8A2BE2);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            font-family: Arial, sans-serif;
         }
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background: linear-gradient(to bottom right, #FF69B4, #8A2BE2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-body {
-    background: linear-gradient(to bottom right, #FF69B4, #8A2BE2);
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
         .container {
             text-align: center;
         }
@@ -48,14 +33,38 @@ body {
             margin-bottom: 10px;
             cursor: pointer;
             display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .circle:hover {
+            background-color: #FF69B4;
+            transform: scale(1.1);
         }
 
         .hidden {
             display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .visible {
             display: block;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .circle-content {
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
     </style>
     <script>
@@ -64,21 +73,22 @@ body {
             content.classList.toggle('hidden');
             content.classList.toggle('visible');
         }
-        document.addEventListener("keydown", function (event){
-    if (event.ctrlKey){
-       event.preventDefault();
-    }
-    if(event.keyCode == 123){
-       event.preventDefault();
-    }
-});
+
+        document.addEventListener("keydown", function (event) {
+            if (event.ctrlKey) {
+                event.preventDefault();
+            }
+            if (event.keyCode == 123) {
+                event.preventDefault();
+            }
+        });
     </script>
 </head>
 
 <body>
     <div class="container">
         <div class="circle" onclick="toggleContent('leanHouse')">LEAN</div>
-        <div id="leanHouse" class="hidden">
+        <div id="leanHouse" class="hidden circle-content">
             <h2>Plan de Contrôle du Monde</h2>
             <div class="circle" onclick="toggleContent('strategies')">L</div>
             <div id="strategies" class="hidden">

@@ -108,13 +108,22 @@
             margin-bottom: 10px;
         }
         .image-2 {
-            max-width: 80%; /* Vous pouvez ajuster le pourcentage selon votre préférence */
+            max-width: 75%; /* Vous pouvez ajuster le pourcentage selon votre préférence */
             height: auto; /* Assurez-vous que l'image conserve son ratio hauteur/largeur */
             border-radius: 50px;
         }
+
     </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="menu">
+    <div class="menu">
+        <a href="#accueil-section"><img src="accueil.png" alt="Accueil"></a>
+        <a href="#hebergement-section"><img src="hebergement.png" alt="Hébergement"></a>
+        <a href="#contact-section"><img src="contact.png" alt="Contact"></a>
+    </div>
+    </div>
     <header>
         <img class="logo" src="logo.jpeg" alt="Votre Logo Gauche">
         <h1>Lean House</h1>
@@ -125,6 +134,7 @@
         <a href="#hebergement-section">Hébergement</a>
         <a href="#contact-section">Contact</a>
     </nav>
+    <div id="accueil-section" class="section">
 <section id="accueil-section">
     <div class="capsule">
         <h2>Accueil</h2>
@@ -140,6 +150,8 @@
         <p>Bienvenue à la Lean House, un lieu d'hébergement religieux situé au cœur de la Colombie,<br>dans la légendaire forêt de Santa Rosa à seulement 5 minutes au sud de Potrero. <br>Notre mission est d'offrir un espace paisible et spirituel pour les voyageurs et les pèlerins en quête de repos et de paix.</p>
     </div>
 </section>
+  </div>
+   <div id="hebergement-section" class="section">
 <section id="hebergement-section">
     <div class="capsule">
         <h2>Nos Services d'Hébergement</h2>
@@ -147,16 +159,20 @@
         <p>La Lean House propose des chambres confortables, des repas traditionnels et des espaces de prière.<br>Notre environnement calme et serein offre l'opportunité de se ressourcer et de se connecter avec la spiritualité.</p>
     </div>
 </section>
+    </div>
+    <div id="contact-section" class="section">
 <section id="contact-section">
     <div class="capsule">
-        <h2>Contactez-Nous !</h2>
+        <h2><br><br>Contactez-Nous !</h2>
         <img src="image3.png" alt="Image 3">
         <p>Adresse : [420 LEAN HOUSE LEAN HOUSE LEAN HOUSE San Andrés y Providencia, Colombie]</p>
         <p>Téléphone : [420 69 69 420]</p>
         <p>Email : [aikiswag@duck.com]</p>
         <img src="image3.png" alt="Image 3">
+        <h2><br></h2>
     </div>
 </section>
+    </div>
     <footer>
         <p>&copy; 2023 Lean House. Tous droits réservés.</p>
     </footer>
@@ -178,7 +194,28 @@
                 window.location.href = "leanadmin.html";
             }
         });
-        document.addEventListener("keydown", function (event){
+document.addEventListener("DOMContentLoaded", function () {
+    var menuLinks = document.querySelectorAll("#menu a");
+
+    menuLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Empêche le comportement par défaut du lien
+
+            var targetId = this.getAttribute("href").substring(1); // Récupère l'ID de la section cible (enlève le '#')
+            var targetElement = document.getElementById(targetId); // Récupère l'élément cible par son ID
+
+            if (targetElement) {
+                var offset = (targetId === "contact-section") ? 40 : 35;
+                var targetOffset = targetElement.offsetTop + offset; // Calcule la position cible avec le décalage
+                window.scrollTo({
+                    top: targetOffset,
+                    behavior: "smooth" // Ajoute un effet de défilement fluide
+                });
+            }
+        });
+    });
+});
+document.addEventListener("keydown", function (event){
     if (event.ctrlKey){
        event.preventDefault();
     }

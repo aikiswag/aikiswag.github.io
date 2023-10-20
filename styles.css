@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu a {
+    margin-bottom: 10px;
+}
+
+.menu img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.menu img:hover {
+    opacity: 1;
+}
+
+.section {
+    height: 500px; /* Hauteur de chaque section, à ajuster selon votre besoin */
+    margin-bottom: 20px; /* Marge entre les sections */
+}

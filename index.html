@@ -84,8 +84,8 @@
 </head>
 <body>
 <div class="triangles">
-    <div class="triangle" style="top: 20%; left: 20%; background: linear-gradient(45deg, #ff8b94, #ff4b55, #ff1e63, #e90052);"></div>
-    <div class="triangle" style="top: 70%; left: 70%; background: linear-gradient(45deg, #ff8b94, #ff4b55, #ff1e63, #e90052);"></div>
+    <div class="triangle" style="top: 20%; left: 20%; background: linear-gradient(45deg, #5a86a0, #78c0a8, #a8eb12, #ffcc29);"></div>
+    <div class="triangle" style="top: 70%; left: 70%; background: linear-gradient(45deg, #5a86a0, #78c0a8, #a8eb12, #ffcc29);"></div>
 </div>
 <div class="login-container">
     <h2>Connexion à Lean House</h2>
@@ -123,7 +123,6 @@
         }
     }
 
-    // Crée les triangles dégradés roses autour de la page
     function createTriangles() {
         var numberOfTriangles = 20;
         var container = document.querySelector('.triangles');
@@ -132,7 +131,7 @@
             triangle.className = 'triangle';
             triangle.style.top = Math.random() * 100 + '%';
             triangle.style.left = Math.random() * 100 + '%';
-            triangle.style.background = 'linear-gradient(45deg, #ff8b94, #ff4b55, #ff1e63, #e90052)';
+            triangle.style.background = 'linear-gradient(45deg, #5a86a0, #78c0a8, #a8eb12, #ffcc29)';
             container.appendChild(triangle);
         }
     }

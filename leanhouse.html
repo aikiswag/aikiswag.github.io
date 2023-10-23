@@ -106,6 +106,7 @@
             max-width: 100%;
             height: auto;
             margin-bottom: 10px;
+            z-index: 1;
         }
         .image-2 {
             max-width: 75%; /* Vous pouvez ajuster le pourcentage selon votre préférence */
@@ -113,14 +114,36 @@
             border-radius: 50px;
         }
 
+        #background-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            z-index: 1;
+        }
+
+        #center-img {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            z-index: 2;
+            transition: opacity 0.1s;
+        }
+
     </style>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <img id="background-img" src="fond.png" alt="Fond">
+    <img id="center-img" src="h.png" alt="Centre">
     <div id="menu">
     <div class="menu">
         <a href="#accueil-section"><img src="accueil.png" alt="Accueil"></a>
-        <a href="#hebergement-section"><img src="hebergement.png" alt="Hébergement"></a>
+        <a id="x" href="#hebergement-section"><img src="hebergement.png" alt="Hébergement"></a>
         <a href="#contact-section"><img src="contact.png" alt="Contact"></a>
     </div>
     </div>
@@ -223,6 +246,43 @@ document.addEventListener("keydown", function (event){
        event.preventDefault();
     }
 });
-    </script>
+        var firstClick = true;
+
+        function replaceEsWithX() {
+            var elements = document.querySelectorAll('h1, p, h2'); // Sélectionne tous les éléments h1 et p et h2
+            elements.forEach(function(element) {
+                element.textContent = element.textContent.replace(/[aeiouAEIOU]/g, 'x'); // Remplace tous les "e" par des "x"
+            });
+        }
+
+        function handleClick() {
+            if (firstClick) {
+                document.getElementById("background-img").style.display = "block";
+                // Fait apparaître progressivement l'image au centre
+                document.getElementById("center-img").style.display = "block";
+                setTimeout(function () {
+                    document.getElementById("center-img").style.opacity = 1;
+                }, 10);
+
+                setTimeout(function () {
+                    replaceEsWithX();
+                }, 4000);
+
+                firstClick = false;
+                setTimeout(function () {
+                    document.getElementById("background-img").style.display = "none";
+                    // Cache progressivement l'image au centre
+                    document.getElementById("center-img").style.opacity = 0;
+                    setTimeout(function () {
+                        document.getElementById("center-img").style.display = "none";
+                        // Détacher l'événement de clic après le premier clic
+                        document.getElementById("x").removeEventListener("click", handleClick);
+                    }, 100); // Durée de la transition
+                }, 200);
+            }
+        }
+        // Attacher la fonction handleClick à l'événement de clic de l'image
+        document.getElementById("x").addEventListener("click", handleClick);
+</script>
 </body>
 </html>

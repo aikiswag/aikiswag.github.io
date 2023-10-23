@@ -27,7 +27,7 @@
         }
 
         .login-container h2 {
-            color: #9b59b6;
+            color: #000000;
         }
 
         .input-group {
@@ -80,6 +80,228 @@
                 transform: translate(0, 0);
             }
         }
+
+      .glitch {
+        animation: glitch-skew 1s infinite linear alternate-reverse;
+      }
+      .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        left: -2px;
+        text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+        animation: glitch-anim2 1s infinite linear alternate-reverse;
+      }
+      @keyframes glitch-anim {
+        0% {
+          clip: rect(30px, 9999px, 42px, 0);
+          transform: skew(0.85deg);
+        }
+        5% {
+          clip: rect(59px, 9999px, 21px, 0);
+          transform: skew(0.34deg);
+        }
+        10% {
+          clip: rect(99px, 9999px, 15px, 0);
+          transform: skew(0.01deg);
+        }
+        15% {
+          clip: rect(25px, 9999px, 61px, 0);
+          transform: skew(0.97deg);
+        }
+        20% {
+          clip: rect(35px, 9999px, 42px, 0);
+          transform: skew(0.94deg);
+        }
+        25% {
+          clip: rect(39px, 9999px, 62px, 0);
+          transform: skew(0.31deg);
+        }
+        30% {
+          clip: rect(62px, 9999px, 55px, 0);
+          transform: skew(0.9deg);
+        }
+        35% {
+          clip: rect(36px, 9999px, 31px, 0);
+          transform: skew(0.13deg);
+        }
+        40% {
+          clip: rect(27px, 9999px, 26px, 0);
+          transform: skew(0.01deg);
+        }
+        45% {
+          clip: rect(55px, 9999px, 9px, 0);
+          transform: skew(0.5deg);
+        }
+        50% {
+          clip: rect(69px, 9999px, 73px, 0);
+          transform: skew(0.85deg);
+        }
+        55% {
+          clip: rect(53px, 9999px, 89px, 0);
+          transform: skew(0.15deg);
+        }
+        60% {
+          clip: rect(20px, 9999px, 28px, 0);
+          transform: skew(0.62deg);
+        }
+        65% {
+          clip: rect(81px, 9999px, 28px, 0);
+          transform: skew(0.1deg);
+        }
+        70% {
+          clip: rect(54px, 9999px, 93px, 0);
+          transform: skew(0.3deg);
+        }
+        75% {
+          clip: rect(22px, 9999px, 6px, 0);
+          transform: skew(0.84deg);
+        }
+        80% {
+          clip: rect(23px, 9999px, 5px, 0);
+          transform: skew(0.55deg);
+        }
+        85% {
+          clip: rect(24px, 9999px, 76px, 0);
+          transform: skew(0.68deg);
+        }
+        90% {
+          clip: rect(3px, 9999px, 29px, 0);
+          transform: skew(0.48deg);
+        }
+        95% {
+          clip: rect(43px, 9999px, 95px, 0);
+          transform: skew(0.37deg);
+        }
+        100% {
+          clip: rect(58px, 9999px, 66px, 0);
+          transform: skew(0.05deg);
+        }
+      }
+      @keyframes glitch-anim2 {
+        0% {
+          clip: rect(66px, 9999px, 28px, 0);
+          transform: skew(0.12deg);
+        }
+        5% {
+          clip: rect(85px, 9999px, 40px, 0);
+          transform: skew(0.7deg);
+        }
+        10% {
+          clip: rect(14px, 9999px, 33px, 0);
+          transform: skew(0.81deg);
+        }
+        15% {
+          clip: rect(48px, 9999px, 76px, 0);
+          transform: skew(0.57deg);
+        }
+        20% {
+          clip: rect(77px, 9999px, 16px, 0);
+          transform: skew(0.4deg);
+        }
+        25% {
+          clip: rect(15px, 9999px, 43px, 0);
+          transform: skew(0.27deg);
+        }
+        30% {
+          clip: rect(33px, 9999px, 11px, 0);
+          transform: skew(0.84deg);
+        }
+        35% {
+          clip: rect(50px, 9999px, 51px, 0);
+          transform: skew(0.16deg);
+        }
+        40% {
+          clip: rect(52px, 9999px, 11px, 0);
+          transform: skew(0.21deg);
+        }
+        45% {
+          clip: rect(39px, 9999px, 58px, 0);
+          transform: skew(0.98deg);
+        }
+        50% {
+          clip: rect(88px, 9999px, 42px, 0);
+          transform: skew(0.42deg);
+        }
+        55% {
+          clip: rect(98px, 9999px, 11px, 0);
+          transform: skew(0.51deg);
+        }
+        60% {
+          clip: rect(73px, 9999px, 73px, 0);
+          transform: skew(0.81deg);
+        }
+        65% {
+          clip: rect(82px, 9999px, 59px, 0);
+          transform: skew(1deg);
+        }
+        70% {
+          clip: rect(64px, 9999px, 84px, 0);
+          transform: skew(0.94deg);
+        }
+        75% {
+          clip: rect(41px, 9999px, 44px, 0);
+          transform: skew(0.38deg);
+        }
+        80% {
+          clip: rect(23px, 9999px, 35px, 0);
+          transform: skew(0.54deg);
+        }
+        85% {
+          clip: rect(20px, 9999px, 100px, 0);
+          transform: skew(0.76deg);
+        }
+        90% {
+          clip: rect(9px, 9999px, 96px, 0);
+          transform: skew(0.64deg);
+        }
+        95% {
+          clip: rect(29px, 9999px, 82px, 0);
+          transform: skew(0.47deg);
+        }
+        100% {
+          clip: rect(15px, 9999px, 94px, 0);
+          transform: skew(0.76deg);
+        }
+      }
+      @keyframes glitch-skew {
+        0% {
+          transform: skew(2deg);
+        }
+        10% {
+          transform: skew(4deg);
+        }
+        20% {
+          transform: skew(4deg);
+        }
+        30% {
+          transform: skew(-2deg);
+        }
+        40% {
+          transform: skew(4deg);
+        }
+        50% {
+          transform: skew(2deg);
+        }
+        60% {
+          transform: skew(-3deg);
+        }
+        70% {
+          transform: skew(-1deg);
+        }
+        80% {
+          transform: skew(-3deg);
+        }
+        90% {
+          transform: skew(-2deg);
+        }
+        100% {
+          transform: skew(-2deg);
+        }
+      }
     </style>
 </head>
 <body>
@@ -88,7 +310,7 @@
     <div class="triangle" style="top: 70%; left: 70%; background: linear-gradient(45deg, #5a86a0, #78c0a8, #a8eb12, #ffcc29);"></div>
 </div>
 <div class="login-container">
-    <h2>Connexion à Lean House</h2>
+        <h2 class="glitch" data-text="Connexion à Lean House">Connexion à Lean House</h2>
     <div class="input-group">
         <input type="text" id="username" placeholder="Nom d'utilisateur" required>
     </div>
@@ -123,6 +345,7 @@
         }
     }
 
+    // Crée les triangles dégradés roses autour de la page
     function createTriangles() {
         var numberOfTriangles = 60;
         var container = document.querySelector('.triangles');
@@ -135,7 +358,7 @@
             container.appendChild(triangle);
         }
     }
-    document.addEventListener("keydown", function (event){
+document.addEventListener("keydown", function (event){
     if (event.ctrlKey){
        event.preventDefault();
     }

@@ -15,14 +15,20 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
+      font-size: 18px; /* Augmenter la taille du texte principal */
+    }
+    .title-container {
+      margin-top: 50px;
+      text-align: center;
     }
     h1 {
       text-align: center;
-      color: #fff;
       text-shadow: 2px 2px 4px #000;
+      font-size: 28px; /* Augmenter la taille du titre */
+      color: #fff;
     }
     h2 {
-      font-size: 16px;
+      font-size: 20px; /* Augmenter la taille du sous-titre */
       text-align: center;
       margin-bottom: 20px;
       color: #fff;
@@ -30,20 +36,24 @@
     .personne {
       border: 1px solid #ccc;
       border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
+      padding: 15px; /* Augmenter l'espacement interne */
+      margin-bottom: 15px; /* Réduire l'espacement entre les capsules */
       background-color: #fff;
       transition: transform 0.3s ease-in-out;
-      max-width: 90%; /* Adjust the maximum width */
-      width: auto; /* Allow the width to adapt */
+      max-width: 90%; /* Ajuster la largeur maximale */
+      width: auto;
     }
     .nom {
       font-weight: bold;
       text-align: center;
+      cursor: pointer;
+      font-size: 22px; /* Augmenter la taille du nom */
+      margin-bottom: 10px; /* Ajuster l'espacement sous le nom */
     }
     .details {
       display: none;
       margin-top: 5px;
+      font-size: 16px; /* Augmenter la taille des détails */
     }
     .personne:hover .details {
       display: block;
@@ -77,9 +87,10 @@
   </script>
 </head>
 <body>
-
+<div class="title-container">
 <h1>Liste Epstein</h1>
 <h2>Cette liste de noms rassemble les personnalités les plus importantes liées à l'affaire</h2>
+</div>
 <div class="personne">
   <p class="nom">Jeffrey Epstein</p>
   <p class="details">Homme d’affaires et criminel sexuel américain. Propriétaire de l'Epstein Island.</p>

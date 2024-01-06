@@ -34,8 +34,8 @@
       margin-bottom: 10px;
       background-color: #fff;
       transition: transform 0.3s ease-in-out;
-      max-width: 400px; /* Limite de la largeur */
-      width: 80%; /* Largeur relative */
+      max-width: 90%; /* Adjust the maximum width */
+      width: auto; /* Allow the width to adapt */
     }
     .nom {
       font-weight: bold;
@@ -49,6 +49,32 @@
       display: block;
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Sélection de tous les éléments avec la classe "nom"
+      var noms = document.querySelectorAll('.nom');
+      
+      // Parcours de chaque élément avec la classe "nom"
+      noms.forEach(function(nom) {
+        // Ajout d'un événement au clic pour ouvrir la capsule correspondante
+        nom.addEventListener('click', function() {
+          // Ciblage de l'élément parent avec la classe "personne"
+          var personne = this.parentNode;
+          
+          // Vérification si la capsule est ouverte ou fermée
+          if (personne.classList.contains('active')) {
+            personne.classList.remove('active'); // Si ouverte, fermer la capsule
+          } else {
+            // Fermer toutes les capsules ouvertes
+            document.querySelectorAll('.personne').forEach(function(p) {
+              p.classList.remove('active');
+            });
+            personne.classList.add('active'); // Si fermée, ouvrir la capsule
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body>
 

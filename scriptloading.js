@@ -46,4 +46,4 @@ if(isFirefox){
 }
 setTimeout(function() {
     window.location.href = 'https://aikiswag.github.io/SashaWin98';
-}, 4500);
+}, 2500);

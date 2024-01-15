@@ -1,0 +1,31 @@
+.hero {
+  min-height: 300px;
+  width: 100%;
+  overflow: hidden;
+  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/51cd271d-db64-4bc4-8596-58f18cc79a01/df6v6br-53705885-d8a8-46b4-ac66-a81cb0a4773e.jpg/v1/fit/w_828,h_490,q_70,strp/level___pink_dreams__the_backrooms_collection__by_dreamyrobot3d_df6v6br-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODA2IiwicGF0aCI6IlwvZlwvNTFjZDI3MWQtZGI2NC00YmM0LTg1OTYtNThmMThjYzc5YTAxXC9kZjZ2NmJyLTUzNzA1ODg1LWQ4YTgtNDZiNC1hYzY2LWE4MWNiMGE0NzczZS5qcGciLCJ3aWR0aCI6Ijw9MTM2MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.u82bDFeQrSo-Mh4m0uCpsyx1NZ7MkPP-26i5IjVL7Fo);
+  background-size: cover;
+}
+body {
+  margin: 0px;
+  color: #585E62;
+  font-family: Arial;
+}
+h1 {
+  padding: 10px;
+  margin: 20px 30px 5px 30px;
+  font-size: 40px;
+}
+h2 {
+  padding: 10px;
+  margin: 0px 30px;
+  font-size: 25px;
+}
+p {
+  padding: 10px;
+  margin: 0px 30px;
+  font-size: 15px;
+}
+a {
+  color : #4466FF;
+  text-decoration: none;
+}

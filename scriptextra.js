@@ -1,3 +1,4 @@
+src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
 // Glitch Line Vars
 var glitch_lines = 15,
 	glitch_line_duration_min = 100,

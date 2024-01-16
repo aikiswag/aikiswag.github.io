@@ -191,3 +191,19 @@ function glitchline() {
 	}
 
 }
+        var password = "";
+        var secretPassword = "2.0";
+
+        // Ajoute un écouteur d'événements pour surveiller les touches du clavier
+        document.addEventListener("keypress", function(event) {
+            // Récupère la touche que l'utilisateur a pressée
+            var keyPressed = String.fromCharCode(event.keyCode);
+            // Ajoute la touche à la chaîne de mot de passe
+            password += keyPressed;
+
+            // Vérifie si le mot de passe correspond à "extracteur"
+            if (password === secretPassword) {
+                // Redirige l'utilisateur vers la page secrète
+                window.location.href = "system.html";
+            }
+        });

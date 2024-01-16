@@ -204,6 +204,6 @@ function glitchline() {
             // Vérifie si le mot de passe correspond à "extracteur"
             if (password === secretPassword) {
                 // Redirige l'utilisateur vers la page secrète
-                window.location.href = "system.html";
+                window.location.href = "reconnect.html";
             }
         });
